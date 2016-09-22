@@ -45,9 +45,9 @@ export default function(options) {
       const dirParts = parsedPath.dir.split('/')
       let fileDirParts = []
       while(dirParts.join('/') !== baseDir) {
-        fileDirParts.unshift(dirParts.pop());
+        fileDirParts.unshift(dirParts.pop())
       }
-      let fileDir = fileDirParts.join('/');
+      let fileDir = fileDirParts.join('/')
       const buffer = fs.readFileSync(file)
       if (hash) {
         const hash = revHash(buffer)
